@@ -1,9 +1,9 @@
 /* 1. SETUP & CONFIGURATION */
 :root {
-  --dark-red: #a00000;
+  --dark-red: #dc3c22; /* Updated to your specified red color */
   --black: #000000;
   --white: #ffffff;
-  --light-red-bg: #ffcdd2; /* Changed to a more saturated red background */
+  --light-red-bg: #fcece9; /* A light tint of your new red for backgrounds */
   --dark-text: #1a1a1a;
   --light-text: #555555;
   --border-color: #e0e0e0;
@@ -72,11 +72,6 @@ section {
 }
 section:nth-of-type(even) {
   background-color: var(--light-red-bg);
-}
-
-/* Contrast fix for paragraphs on the new red background */
-section:nth-of-type(even) p {
-  color: #4a4a4a;
 }
 
 section h2 {
@@ -235,11 +230,11 @@ header {
   font-weight: 700;
   margin-top: 20px;
   transition: var(--transition-speed);
-  box-shadow: 0 4px 15px rgba(160, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(220, 60, 34, 0.4);
 }
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(160, 0, 0, 0.4);
+  box-shadow: 0 7px 20px rgba(220, 60, 34, 0.5);
   color: var(--white);
 }
 /* Hero Illustration */
@@ -343,7 +338,7 @@ header {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--white);
-  background: linear-gradient(135deg, var(--dark-red), #c00000);
+  background: linear-gradient(135deg, var(--dark-red), #e65c44);
   padding: 15px 25px;
   border-radius: var(--border-radius);
   display: block;
@@ -642,6 +637,12 @@ footer .flex {
 footer .footer-content {
   flex-grow: 1;
   flex-basis: 280px;
+}
+.footer-content-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 footer .footer-content h2,
 footer .footer-content h3 {
