@@ -1,9 +1,9 @@
 /* 1. SETUP & CONFIGURATION */
 :root {
-  --dark-red: #dc3c22; /* Updated to your specified red color */
+  --dark-red: #9d2129; /* Updated to match the new logo's red */
   --black: #000000;
   --white: #ffffff;
-  --light-red-bg: #fcece9; /* A light tint of your new red for backgrounds */
+  --light-red-bg: #ffffff;
   --dark-text: #1a1a1a;
   --light-text: #555555;
   --border-color: #e0e0e0;
@@ -230,11 +230,11 @@ header {
   font-weight: 700;
   margin-top: 20px;
   transition: var(--transition-speed);
-  box-shadow: 0 4px 15px rgba(220, 60, 34, 0.4);
+  box-shadow: 0 4px 15px rgba(157, 33, 41, 0.4);
 }
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(220, 60, 34, 0.5);
+  box-shadow: 0 7px 20px rgba(157, 33, 41, 0.5);
   color: var(--white);
 }
 /* Hero Illustration */
@@ -338,7 +338,7 @@ header {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--white);
-  background: linear-gradient(135deg, var(--dark-red), #e65c44);
+  background: linear-gradient(135deg, var(--dark-red), #b53e46);
   padding: 15px 25px;
   border-radius: var(--border-radius);
   display: block;
@@ -623,26 +623,17 @@ header {
   height: 100% !important;
 }
 
-/* 6. FOOTER */
+/* 6. FOOTER -- REVISED */
 footer {
   background-color: var(--dark-text);
   color: var(--white);
   padding: 60px 0 30px;
 }
-footer .flex {
-  display: flex;
-  flex-wrap: wrap;
+footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   gap: 30px;
-}
-footer .footer-content {
-  flex-grow: 1;
-  flex-basis: 280px;
-}
-.footer-content-center {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 footer .footer-content h2,
 footer .footer-content h3 {
@@ -650,6 +641,17 @@ footer .footer-content h3 {
   color: var(--white);
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+.footer-col-1 {
+  justify-self: start;
+}
+.footer-col-2 {
+  justify-self: center;
+  text-align: center;
+}
+.footer-col-3 {
+  justify-self: end;
+  text-align: left;
 }
 footer .footer-logo-left {
   width: 20rem;
@@ -761,7 +763,6 @@ footer .reserved {
   .dropdown.open .dropdown-content {
     display: block;
   }
-
   .mobile-menu-btn {
     display: block;
   }
@@ -774,6 +775,25 @@ footer .reserved {
   }
   .hero-text p {
     text-align: center;
+  }
+  footer .footer-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3 {
+    justify-self: center;
+    text-align: center;
+  }
+  footer .footer-description,
+  footer .location-section p,
+  footer .contact-item p {
+    text-align: center;
+  }
+  .soc-items {
+    justify-content: center;
   }
 }
 
@@ -811,23 +831,5 @@ footer .reserved {
   .timeline-item::after,
   .timeline-item.right::after {
     left: 10px;
-  }
-
-  footer .flex {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  footer .footer-content,
-  footer .footer-description {
-    width: 100%;
-  }
-  footer .footer-description,
-  footer .location-section p,
-  footer .contact-item p {
-    text-align: center;
-  }
-  .soc-items {
-    justify-content: center;
   }
 }
