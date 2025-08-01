@@ -1,6 +1,6 @@
 /* 1. SETUP & CONFIGURATION */
 :root {
-  --dark-red: #9d2129; /* Updated to match the new logo's red */
+  --dark-red: #9d2129;
   --black: #000000;
   --white: #ffffff;
   --light-red-bg: #ffffff;
@@ -237,53 +237,18 @@ header {
   box-shadow: 0 7px 20px rgba(157, 33, 41, 0.5);
   color: var(--white);
 }
-/* Hero Illustration */
+
+/* Hero Illustration -- REVISED */
 .hero-illustration {
   flex: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  min-height: 350px;
 }
-.tech-icon {
-  position: absolute;
-  font-size: 3rem;
-  color: var(--dark-red);
-  opacity: 0;
-  animation: float 8s ease-in-out infinite, fadeIn 1s ease forwards;
-  animation-delay: calc(var(--i) * 0.2s);
-}
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(-30px) rotate(15deg);
-    opacity: 1;
-  }
-}
-.tech-icon:nth-child(1) {
-  top: 10%;
-  left: 20%;
-}
-.tech-icon:nth-child(2) {
-  top: 30%;
-  left: 70%;
-}
-.tech-icon:nth-child(3) {
-  top: 65%;
-  left: 5%;
-}
-.tech-icon:nth-child(4) {
-  top: 75%;
-  left: 80%;
-}
-.tech-icon:nth-child(5) {
-  top: 40%;
-  left: 30%;
+.hero-illustration img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px; /* Batasi tinggi maksimum gambar */
 }
 
 /* 4. GENERIC COMPONENTS (Cards, Grids) */
@@ -623,7 +588,7 @@ header {
   height: 100% !important;
 }
 
-/* 6. FOOTER -- REVISED */
+/* 6. FOOTER */
 footer {
   background-color: var(--dark-text);
   color: var(--white);
