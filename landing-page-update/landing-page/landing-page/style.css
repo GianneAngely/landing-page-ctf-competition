@@ -319,45 +319,52 @@ header {
 /* 5. SPECIFIC SECTIONS */
 /* Countdown */
 .countdown {
-  background: var(--white); /* Changed background */
+  background: var(--white);
 }
-.countdown h2,
-.countdown #timer small {
-  color: var(--black); /* Changed text color */
+.countdown h2 {
+  color: var(--black);
 }
 .countdown #timer {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 10px;
-  color: var(--white); /* Keep numbers white */
+  margin-top: 20px;
 }
-.countdown #timer span > span {
-  background: linear-gradient(135deg, var(--dark-red), #c00000);
-  padding: 15px;
-  border-radius: var(--border-radius);
-  min-width: 90px;
-  display: inline-block;
+.timer-unit {
   text-align: center;
 }
-.countdown #timer small {
-  font-size: 0.8rem;
-  margin-top: 10px;
+.timer-unit span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--dark-red), #c00000);
+  padding: 15px 25px;
+  border-radius: var(--border-radius);
+  display: block;
+  min-width: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.timer-unit small {
+  font-size: 1rem;
   font-weight: 500;
+  color: var(--black);
 }
 
-/* Categories */
+/* Categories -- REVISED for Vertical Centering */
 .theme-card {
   background: linear-gradient(135deg, var(--white), #f9f9f9);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 25px;
-  text-align: center;
   transition: var(--transition-speed);
   box-shadow: var(--shadow);
+  /* Added Flexbox for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .theme-card:hover {
   transform: translateY(-8px);
@@ -443,7 +450,7 @@ header {
   text-align: left;
 }
 
-/* Prizes -- Animation Enhanced */
+/* Prizes */
 .prize-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -523,24 +530,23 @@ header {
   color: var(--dark-text);
 }
 
-/* Partners -- Logo Size Restored */
+/* Partners */
 .logos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px; /* Increased gap for larger logos */
+  gap: 40px;
   margin-top: 40px;
 }
 .partner-logo {
-  height: 120px; /* Increased height */
-  max-width: 250px; /* Increased max-width */
+  height: 120px;
+  max-width: 250px;
   object-fit: contain;
   transition: var(--transition-speed);
-  /* Removed grayscale and opacity for original look */
 }
 .partner-logo:hover {
-  transform: scale(1.1); /* Keep hover effect */
+  transform: scale(1.1);
 }
 .partner-logo.dark-bg {
   background-color: var(--black);
