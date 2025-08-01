@@ -98,11 +98,7 @@
               >
             </div>
             <div class="hero-illustration">
-              <div class="tech-icon" style="--i: 1">🛡️</div>
-              <div class="tech-icon" style="--i: 2">💻</div>
-              <div class="tech-icon" style="--i: 3">🔑</div>
-              <div class="tech-icon" style="--i: 4">🌐</div>
-              <div class="tech-icon" style="--i: 5">⚙️</div>
+              <img src="hero-image.png" alt="Cyber Security Illustration" />
             </div>
           </div>
         </div>
@@ -112,10 +108,22 @@
         <div class="container">
           <h2>Event Starts In:</h2>
           <div id="timer">
-            <span><span id="days">00</span><small>Days</small></span>
-            <span><span id="hours">00</span><small>Hours</small></span>
-            <span><span id="minutes">00</span><small>Minutes</small></span>
-            <span><span id="seconds">00</span><small>Seconds</small></span>
+            <div class="timer-unit">
+              <span id="days">00</span>
+              <small>Days</small>
+            </div>
+            <div class="timer-unit">
+              <span id="hours">00</span>
+              <small>Hours</small>
+            </div>
+            <div class="timer-unit">
+              <span id="minutes">00</span>
+              <small>Minutes</small>
+            </div>
+            <div class="timer-unit">
+              <span id="seconds">00</span>
+              <small>Seconds</small>
+            </div>
           </div>
         </div>
       </section>
@@ -221,7 +229,7 @@
 
       <section id="timeline">
         <div class="container">
-          <h2>Realtime Timeline</h2>
+          <h2>Timeline</h2>
           <div class="timeline-wrapper">
             <div class="timeline-item left">
               <div class="timeline-content">
@@ -259,17 +267,19 @@
             <div class="prize-card gold">
               <div class="prize-icon">🥇</div>
               <h4>1st Place</h4>
-              <div class="prize-amount">IDR 1,000,000 + Merchandise</div>
+              <div class="prize-amount">
+                IDR 1,000,000 + Official Merchandise
+              </div>
             </div>
             <div class="prize-card silver">
               <div class="prize-icon">🥈</div>
               <h4>2nd Place</h4>
-              <div class="prize-amount">IDR 600,000 + Merchandise</div>
+              <div class="prize-amount">IDR 600,000 + Official Merchandise</div>
             </div>
             <div class="prize-card bronze">
               <div class="prize-icon">🥉</div>
               <h4>3rd Place</h4>
-              <div class="prize-amount">IDR 400,000 + Merchandise</div>
+              <div class="prize-amount">IDR 400,000 + Official Merchandise</div>
             </div>
           </div>
         </div>
@@ -407,48 +417,66 @@
     <footer id="contact">
       <div class="container">
         <div class="footer-grid">
-          <div class="footer-column about-us">
+          <div class="footer-content footer-col-1">
             <img
               src="footer-white-logo.png"
-              alt="Sawah Cyber Security White Logo"
-              class="footer-logo"
+              alt="Sawah Cyber Security Logo"
+              class="footer-logo-left"
             />
-            <p>
+            <p class="footer-description">
               Cultivating Resilience and Securing Beyond Borders from Bali's
               Sawah Fields.
             </p>
-            <div class="social-media">
-              <a
-                href="https://id.linkedin.com/company/sawah-cyber-security"
-                target="_blank"
-                ><img src="linkedin.png" alt="LinkedIn"
-              /></a>
-              <a href="https://x.com/SawahCyber" target="_blank"
-                ><img src="twitter.png" alt="Twitter"
-              /></a>
-              <a href="https://www.instagram.com/sawahcyber.id/" target="_blank"
-                ><img src="instagram.png" alt="Instagram"
-              /></a>
+            <div class="footer-social-media">
+              <h3>Follow Us</h3>
+              <div class="soc-items">
+                <a
+                  href="https://id.linkedin.com/company/sawah-cyber-security"
+                  target="_blank"
+                >
+                  <img src="linkedin.png" alt="LinkedIn" class="linkedin" />
+                </a>
+                <a href="https://x.com/SawahCyber" target="_blank">
+                  <img src="twitter.png" alt="Twitter" class="twitter" />
+                </a>
+                <a
+                  href="https://www.instagram.com/sawahcyber.id/"
+                  target="_blank"
+                >
+                  <img src="instagram.png" alt="Instagram" class="instagram" />
+                </a>
+              </div>
             </div>
           </div>
-          <div class="footer-column">
-            <h3>Sponsorship</h3>
+          <div class="footer-content footer-col-2">
+            <h2>Sponsorship & Partnership</h2>
             <img
               src="qrcode_sponsor.png"
               alt="Sponsorship QR Code"
               class="qrcode"
             />
           </div>
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>📍 Atanaya Hotel Bali, Kuta, Bali</p>
-            <p>📧 <a href="mailto:info@sawahcyber.id">info@sawahcyber.id</a></p>
-            <p>📞 <a href="tel:+6282221896495">+62 822-2189-6495</a></p>
+          <div class="footer-content footer-col-3">
+            <h2>Contact Us</h2>
+            <div class="location-section">
+              <p>
+                📍 Graha Merdeka Renon - WorkBez Unit 15, Jalan Merdeka,
+                Denpasar- Bali
+              </p>
+            </div>
+            <div class="contact-item">
+              <p>
+                📧 <a href="mailto:info@sawahcyber.id">info@sawahcyber.id</a>
+              </p>
+            </div>
+            <div class="contact-item">
+              <p>📞 <a href="tel:+6282221896495">+62 822-2189-6495</a></p>
+            </div>
           </div>
         </div>
-        <div class="copyright">
-          <p>© 2025 Sawah Cyber Security. All Rights Reserved.</p>
-        </div>
+        <p class="reserved">
+          © 2025 Sawah Cyber Security. All Rights Reserved.
+        </p>
       </div>
     </footer>
 
