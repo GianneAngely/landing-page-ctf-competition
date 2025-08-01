@@ -352,7 +352,7 @@ header {
   color: var(--black);
 }
 
-/* Categories -- REVISED for Vertical Centering */
+/* Categories */
 .theme-card {
   background: linear-gradient(135deg, var(--white), #f9f9f9);
   border: 1px solid var(--border-color);
@@ -360,7 +360,6 @@ header {
   padding: 25px;
   transition: var(--transition-speed);
   box-shadow: var(--shadow);
-  /* Added Flexbox for centering */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -530,28 +529,33 @@ header {
   color: var(--dark-text);
 }
 
-/* Partners */
+/* Partners -- REVISED LOGO SIZE */
 .logos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 20px;
+  padding: 20px 0;
 }
 .partner-logo {
-  height: 120px;
-  max-width: 250px;
+  height: 200px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 5px;
+  padding: 12px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   object-fit: contain;
-  transition: var(--transition-speed);
-}
-.partner-logo:hover {
-  transform: scale(1.1);
+  margin: 0 15px;
 }
 .partner-logo.dark-bg {
-  background-color: var(--black);
+  background-color: black;
   padding: 15px;
-  border-radius: var(--border-radius);
+}
+.partner-logo:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 /* FAQ */
@@ -618,58 +622,77 @@ header {
   height: 100% !important;
 }
 
-/* 6. FOOTER */
+/* 6. FOOTER -- REVISED */
 footer {
-  background-color: var(--black);
-  color: #a0a0a0;
-  padding: 60px 0 20px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
-}
-.footer-column h3 {
+  background-color: var(--dark-text);
   color: var(--white);
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  padding: 60px 0 30px;
 }
-.footer-column p {
+footer .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+footer .footer-content {
+  flex-grow: 1;
+  flex-basis: 280px;
+}
+footer .footer-content h2,
+footer .footer-content h3 {
+  margin-top: 1rem;
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+footer .footer-logo-left {
+  width: 20rem;
+  max-width: 100%;
+}
+footer .footer-description {
+  width: 20rem;
+  max-width: 100%;
+  margin-top: 1.5rem;
   color: #a0a0a0;
   text-align: left;
 }
-.footer-column a {
+.footer-social-media {
+  margin-top: 1.5rem;
+}
+.soc-items {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.soc-items img {
+  width: 32px;
+}
+footer .qrcode {
+  width: 10rem;
+}
+footer .location-section,
+footer .contact-item {
+  margin: 1rem 0;
   color: #a0a0a0;
 }
-.footer-column a:hover {
+footer .location-section p,
+footer .contact-item p {
+  text-align: left;
+  color: #a0a0a0;
+}
+footer .contact-item a {
+  color: #a0a0a0;
+  text-decoration: none;
+}
+footer .contact-item a:hover {
   color: var(--white);
 }
-.footer-logo {
-  max-width: 200px;
-  margin-bottom: 20px;
-}
-.social-media {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-.social-media img {
-  width: 32px;
-  transition: var(--transition-speed);
-}
-.social-media a:hover img {
-  transform: scale(1.1);
-}
-.qrcode {
-  width: 120px;
-  border-radius: var(--border-radius);
-}
-.copyright {
+footer .reserved {
   text-align: center;
+  margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid #333;
   font-size: 0.9rem;
+  color: #a0a0a0;
 }
 
 /* 7. ANIMATIONS & RESPONSIVENESS */
@@ -727,10 +750,10 @@ footer {
   }
   .dropdown:hover .dropdown-content {
     display: none;
-  } /* Disable hover on mobile */
+  }
   .dropdown.open .dropdown-content {
     display: block;
-  } /* Use JS to toggle */
+  }
 
   .mobile-menu-btn {
     display: block;
@@ -767,7 +790,6 @@ footer {
   .two-column {
     grid-template-columns: 1fr;
   }
-
   .timeline-wrapper::after {
     left: 20px;
   }
@@ -784,15 +806,21 @@ footer {
     left: 10px;
   }
 
-  .footer-grid {
-    text-align: center;
-  }
-  .footer-column {
-    display: flex;
+  footer .flex {
     flex-direction: column;
     align-items: center;
-  }
-  .footer-column p {
     text-align: center;
+  }
+  footer .footer-content,
+  footer .footer-description {
+    width: 100%;
+  }
+  footer .footer-description,
+  footer .location-section p,
+  footer .contact-item p {
+    text-align: center;
+  }
+  .soc-items {
+    justify-content: center;
   }
 }
