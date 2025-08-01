@@ -427,6 +427,7 @@ header {
 }
 .timeline-item:hover::after {
   transform: scale(1.2);
+  background-color: var(--dark-red); /* This fills the circle on hover */
 }
 .timeline-content {
   padding: 20px;
@@ -529,7 +530,7 @@ header {
   color: var(--dark-text);
 }
 
-/* Partners -- REVISED LOGO SIZE */
+/* Partners */
 .logos {
   display: flex;
   justify-content: center;
@@ -622,7 +623,7 @@ header {
   height: 100% !important;
 }
 
-/* 6. FOOTER -- REVISED */
+/* 6. FOOTER */
 footer {
   background-color: var(--dark-text);
   color: var(--white);
