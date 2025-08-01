@@ -3,7 +3,7 @@
   --dark-red: #a00000;
   --black: #000000;
   --white: #ffffff;
-  --light-red-bg: #ffe5e5; /* Changed from pink to a light red */
+  --light-red-bg: #ffcdd2; /* Changed to a more saturated red background */
   --dark-text: #1a1a1a;
   --light-text: #555555;
   --border-color: #e0e0e0;
@@ -72,6 +72,11 @@ section {
 }
 section:nth-of-type(even) {
   background-color: var(--light-red-bg);
+}
+
+/* Contrast fix for paragraphs on the new red background */
+section:nth-of-type(even) p {
+  color: #4a4a4a;
 }
 
 section h2 {
